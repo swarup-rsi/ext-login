@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Khan Academy Auto Login (POC)</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>Khan Academy Auto Login</h1>
+      <p class="popup__hint">POC — credentials are hardcoded in the extension source.</p>
+      <div class="popup__actions">
+        <button id="login-button" class="popup__button" type="button">Login</button>
+        <button
+          id="false-login-button"
+          class="popup__button popup__button--secondary"
+          type="button"
+        >
+          Login with False Creds
+        </button>
+      </div>
+      <p id="status" class="popup__status" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

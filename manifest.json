@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Khan Academy Auto Login (POC)",
+  "version": "0.1.0",
+  "description": "Proof of concept: blurs the Khan Academy login page and performs an automated login when triggered from the toolbar popup.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Khan Academy Auto Login"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.khanacademy.org/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.khanacademy.org/login*"],
+      "js": ["network-interceptor.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.khanacademy.org/login*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
