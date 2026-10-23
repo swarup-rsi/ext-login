@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Khan Academy Auto Login (POC)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Proof of concept: blurs the Khan Academy login page and performs an automated login when triggered from the toolbar popup.",
   "action": {
     "default_popup": "popup.html",
